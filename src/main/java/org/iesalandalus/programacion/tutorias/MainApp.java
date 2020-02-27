@@ -6,10 +6,15 @@ import org.iesalandalus.programacion.tutorias.mvc.vista.Vista;
 
 public class MainApp {
 
+	private static Modelo modelo;
+	private static Vista vista;
+	private static Controlador controlador;
+	
 	public static void main(String[] args) {
-		Modelo modelo = new Modelo();
-		Vista vista = new Vista();
-		Controlador controlador = new Controlador(modelo, vista);
+		//System.out.println("Gestión Tutorías del IES Al-Ándalus");
+		modelo = new Modelo();
+		vista = new Vista();
+		controlador = new Controlador(modelo,vista);
 		controlador.comenzar();
 	}
 
